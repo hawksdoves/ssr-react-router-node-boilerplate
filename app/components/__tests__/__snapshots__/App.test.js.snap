@@ -1,0 +1,280 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should render Home component for route / 1`] = `
+<StaticRouter
+  basename=""
+  context={Object {}}
+  location="/"
+>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "createHref": [Function],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <App>
+      <div>
+        Your SSR React Router Node App initialised with data!
+        <Switch>
+          <Route
+            component={[Function]}
+            computedMatch={
+              Object {
+                "isExact": true,
+                "params": Object {},
+                "path": "/",
+                "url": "/",
+              }
+            }
+            exact={true}
+            location={
+              Object {
+                "hash": "",
+                "pathname": "/",
+                "search": "",
+              }
+            }
+            path="/"
+          >
+            <Home
+              history={
+                Object {
+                  "action": "POP",
+                  "block": [Function],
+                  "createHref": [Function],
+                  "go": [Function],
+                  "goBack": [Function],
+                  "goForward": [Function],
+                  "listen": [Function],
+                  "location": Object {
+                    "hash": "",
+                    "pathname": "/",
+                    "search": "",
+                  },
+                  "push": [Function],
+                  "replace": [Function],
+                }
+              }
+              location={
+                Object {
+                  "hash": "",
+                  "pathname": "/",
+                  "search": "",
+                }
+              }
+              match={
+                Object {
+                  "isExact": true,
+                  "params": Object {},
+                  "path": "/",
+                  "url": "/",
+                }
+              }
+              staticContext={Object {}}
+            >
+              <div>
+                 You are on your home page 
+              </div>
+            </Home>
+          </Route>
+        </Switch>
+      </div>
+    </App>
+  </Router>
+</StaticRouter>
+`;
+
+exports[`App should render List component for route /pokemon/ability/testing 1`] = `
+<StaticRouter
+  basename=""
+  context={Object {}}
+  location="/pokemon/ability/testing"
+>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "createHref": [Function],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/pokemon/ability/testing",
+          "search": "",
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <App
+      pokemon={
+        Object {
+          "list": Array [],
+        }
+      }
+    >
+      <div>
+        Your SSR React Router Node App initialised with data!
+        <Switch>
+          <Route
+            computedMatch={
+              Object {
+                "isExact": true,
+                "params": Object {
+                  "ability": "testing",
+                },
+                "path": "/pokemon/ability/:ability",
+                "url": "/pokemon/ability/testing",
+              }
+            }
+            location={
+              Object {
+                "hash": "",
+                "pathname": "/pokemon/ability/testing",
+                "search": "",
+              }
+            }
+            path="/pokemon/ability/:ability"
+            render={[Function]}
+          >
+            <List
+              location={
+                Object {
+                  "history": Object {
+                    "action": "POP",
+                    "block": [Function],
+                    "createHref": [Function],
+                    "go": [Function],
+                    "goBack": [Function],
+                    "goForward": [Function],
+                    "listen": [Function],
+                    "location": Object {
+                      "hash": "",
+                      "pathname": "/pokemon/ability/testing",
+                      "search": "",
+                    },
+                    "push": [Function],
+                    "replace": [Function],
+                  },
+                  "location": Object {
+                    "hash": "",
+                    "pathname": "/pokemon/ability/testing",
+                    "search": "",
+                  },
+                  "match": Object {
+                    "isExact": true,
+                    "params": Object {
+                      "ability": "testing",
+                    },
+                    "path": "/pokemon/ability/:ability",
+                    "url": "/pokemon/ability/testing",
+                  },
+                  "staticContext": Object {},
+                }
+              }
+              pokemon={Array []}
+            >
+              <div>
+                <h3>
+                  testing
+                </h3>
+                <ul />
+              </div>
+            </List>
+          </Route>
+        </Switch>
+      </div>
+    </App>
+  </Router>
+</StaticRouter>
+`;
+
+exports[`App should render Redirect component for route /pokemon 1`] = `
+<StaticRouter
+  basename=""
+  context={
+    Object {
+      "action": "REPLACE",
+      "location": Object {
+        "hash": "",
+        "pathname": "/pokemon/ability/telepathy",
+        "search": "",
+      },
+      "url": "/pokemon/ability/telepathy",
+    }
+  }
+  location="/pokemon"
+>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "createHref": [Function],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/pokemon",
+          "search": "",
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <App>
+      <div>
+        Your SSR React Router Node App initialised with data!
+        <Switch>
+          <Route
+            computedMatch={
+              Object {
+                "isExact": true,
+                "params": Object {},
+                "path": "/pokemon",
+                "url": "/pokemon",
+              }
+            }
+            exact={true}
+            location={
+              Object {
+                "hash": "",
+                "pathname": "/pokemon",
+                "search": "",
+              }
+            }
+            path="/pokemon"
+            render={[Function]}
+          >
+            <Redirect
+              push={false}
+              to="/pokemon/ability/telepathy"
+            />
+          </Route>
+        </Switch>
+      </div>
+    </App>
+  </Router>
+</StaticRouter>
+`;

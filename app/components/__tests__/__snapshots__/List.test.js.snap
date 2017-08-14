@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`List should render correctly when given location 1`] = `
+<div>
+  <h3>
+    swagger
+  </h3>
+  <ul>
+    <li>
+      friendly
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`List should render correctly when not given location 1`] = `
+<div>
+  <h3>
+    swagger
+  </h3>
+  <ul>
+    <li>
+      friendly
+    </li>
+  </ul>
+</div>
+`;

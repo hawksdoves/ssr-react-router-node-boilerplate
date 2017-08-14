@@ -1,17 +1,16 @@
 {
-  "name": "react-node-boilerplate",
+  "name": "ssr-react-router-node-boilerplate",
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build:server": "babel ./app/server -d build/server",
-    "build:watch:server": "babel ./app/server -d build/server --watch",
+    "build:server": "babel ./app -d build",
+    "build:watch:server": "babel ./app -d build --watch",
     "build:client": "webpack --config ./webpack.config.js/",
     "build:watch:client": "webpack --config ./webpack.config.js/ --watch",
     "build:prod": "npm run build:server && npm run build:client",
     "start": "npm run build:prod && NODE_ENV=production node ./build/server/index.js",
     "start:dev": "parallelshell 'npm run build:watch:server' 'npm run build:watch:client' 'nodemon ./build/server/index.js'",
-    "start:dev:client": "webpack-dev-server",
-    "test": "jest --watch"
+    "test": "jest --watch --coverage"
   },
   "author": "",
   "license": "ISC",
@@ -35,9 +34,11 @@
     }
   },
   "dependencies": {
+    "cors": "^2.8.4",
     "express": "^4.15.3",
     "react": "^15.6.1",
-    "react-dom": "^15.6.1"
+    "react-dom": "^15.6.1",
+    "react-router-dom": "^4.1.2"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
@@ -51,6 +52,9 @@
     "jest": "^20.0.4",
     "nodemon": "^1.11.0",
     "parallelshell": "^3.0.1",
+    "react-test-renderer": "^15.6.1",
+    "redux-mock-store": "^1.2.3",
+    "supertest": "^3.0.0",
     "webpack": "^3.4.1",
     "webpack-dev-server": "^2.6.1"
   }

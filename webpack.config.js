@@ -21,12 +21,5 @@ module.exports = {
                 }
             }
         ]
-    },
-    plugins: [
-        new HtmlWebpackPlugin({
-            template: './app/public/index.html',
-            filename: 'index.html',
-            inject: 'body',
-        }),
-    ],
+    }
 };

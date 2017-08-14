@@ -30,12 +30,5 @@ module.exports = {
             presets: ['es2015', 'react']
         }
         }]
-    },
-    plugins: [
-        new HtmlWebpackPlugin({
-            template: './app/public/index.html',
-            filename: 'index.html',
-            inject: 'body',
-        })
-    ],
+    }
 };
