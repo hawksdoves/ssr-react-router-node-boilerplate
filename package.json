@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build:server": "babel ./app -d build",
-    "build:watch:server": "babel ./app -d build --watch",
+    "build": "babel ./app -d build",
+    "build:watch": "babel ./app -d build --watch",
     "build:client": "webpack --config ./webpack.config.js/",
     "build:watch:client": "webpack --config ./webpack.config.js/ --watch",
-    "build:prod": "npm run build:server && npm run build:client",
+    "build:prod": "npm run build && npm run build:client",
     "start": "npm run build:prod && NODE_ENV=production node ./build/server/index.js",
-    "start:dev": "parallelshell 'npm run build:watch:server' 'npm run build:watch:client' 'nodemon ./build/server/index.js'",
+    "start:dev": "parallelshell 'npm run build:watch' 'npm run build:watch:client' 'nodemon ./build/server/index.js'",
     "test": "jest --watch --coverage"
   },
   "author": "",
@@ -34,6 +34,7 @@
     }
   },
   "dependencies": {
+    "axios": "^0.16.2",
     "cors": "^2.8.4",
     "express": "^4.15.3",
     "react": "^15.6.1",
